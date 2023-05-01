@@ -1,0 +1,329 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: #f8f8f8;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button,
+input[type=submit] {
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+}
+
+.header-top {
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 27px 34px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.header-field-2 a {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+}
+.header-field-2 a:first-child {
+  text-decoration: underline;
+}
+
+.header-field-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2px;
+  background-color: white;
+  border: 0;
+}
+.header-field-3 span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+.header-field-3 a::after {
+  content: "";
+  width: 1px;
+  height: 18px;
+  display: inline-block;
+  margin: 0 2px;
+  background: #c4c4c4;
+}
+.header-field-3 a:last-child::after {
+  display: none;
+}
+
+.input-container {
+  width: 610px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.input-container img {
+  left: 2%;
+  position: absolute;
+  width: 20px;
+  aspect-ratio: 1;
+}
+.input-container button {
+  border-radius: 36px;
+  position: absolute;
+  height: 34px;
+  width: 104px;
+  right: 6px;
+  background-color: #ff0000;
+  color: white;
+  border: 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+.input-container input {
+  background-color: #f8f8f8;
+  border-radius: 36px;
+  border: 1px solid rgba(196, 196, 196, 0.3);
+  width: 100%;
+  height: 100%;
+  padding-left: 50px;
+  font-size: 16px;
+}
+.input-container input:focus {
+  outline: none;
+}
+.input-container input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+.input-container input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.header-field-5 {
+  display: flex;
+  justify-content: space-between;
+}
+.header-field-5 .header-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+.header-field-5 .header-btn:nth-child(3) {
+  position: relative;
+}
+.header-field-5 .header-btn:nth-child(3)::after {
+  content: "2";
+  position: absolute;
+  top: -5px;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #ff0000;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  color: white;
+}
+.header-field-5 .header-btn span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.header-field-5 .header-btn img {
+  width: 22px;
+  height: 22px;
+}
+
+.header-bottom {
+  height: 70px;
+  padding: 10px 33px;
+  width: 100%;
+}
+.header-bottom ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-bottom ul li {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.019em;
+  cursor: pointer;
+}
+.header-bottom ul li:nth-child(2) {
+  color: #ff0000;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+  display: none;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+}
+section .section-header {
+  display: flex;
+  justify-content: space-between;
+}
+section .section-header .breadcrumb {
+  display: flex;
+}
+section .section-header .breadcrumb li::after {
+  content: ">";
+  margin: 3px;
+}
+section .section-header .breadcrumb li:last-child::after {
+  display: none;
+}
+section .section-body {
+  border-radius: 4px;
+  height: 670px;
+  background-color: white;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.02);
+  padding: 35px 41px;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+}
+section .section-body .images {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+}
+section .section-body .images .col1 {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section .section-body .images .col1 button {
+  height: 31px;
+  width: 120px;
+}
+section .section-body .images .col2 {
+  grid-column: span 5;
+}
+
+footer {
+  color: white;
+}
+
+.footer-top {
+  height: 238px;
+  background-color: #26282b;
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  padding: 30px 200px;
+  gap: 150px;
+}
+.footer-top .footer-menus {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-top .footer-menus .footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  justify-content: space-between;
+}
+.footer-top .footer-menus .footer-menu li {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+}
+.footer-top .footer-menus .footer-menu .header {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 23px;
+  letter-spacing: 0.05em;
+}
+.footer-top .footer-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer-top .footer-form .heading {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+}
+.footer-top .footer-form form {
+  display: flex;
+  gap: 10px;
+}
+.footer-top .footer-form form input[type=email] {
+  width: 256px;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid rgba(196, 196, 196, 0.3);
+  background-color: white;
+  padding: 15px;
+}
+.footer-top .footer-form form input[type=submit] {
+  background-color: #ff0000;
+  color: white;
+  border-radius: 4px;
+  padding: 14px 28px;
+  border: 0;
+}
+.footer-top .footer-form a {
+  text-decoration: underline;
+  color: white;
+}
+
+.footer-bottom {
+  height: 56px;
+  background-color: #221f23;
+  display: flex;
+  gap: 70px;
+  align-items: center;
+  padding: 20px 200px;
+}
+.footer-bottom span {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.footer-bottom .col1 {
+  flex: 2;
+  display: flex;
+}
+.footer-bottom .col2 {
+  flex: 3;
+}
+.footer-bottom .col3 {
+  flex: 1;
+}/*# sourceMappingURL=style.css.map */
